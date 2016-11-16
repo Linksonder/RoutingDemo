@@ -1,0 +1,16 @@
+﻿<Window x:Class="RoutinigDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoutinigDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding Main, Source={StaticResource  Locator}}">
+    <StackPanel>
+        <Button Command="{Binding SetViewCommand}" CommandParameter="1" >Set View One</Button>
+        <Button Command="{Binding SetViewCommand}" CommandParameter="2" >Set View Two</Button>
+
+        <ContentControl  Content="{Binding CurrentView}" ></ContentControl>
+    </StackPanel>
+</Window>
